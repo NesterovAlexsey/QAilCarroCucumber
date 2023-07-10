@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login" tests="3" skipped="0" failures="1" errors="0" timestamp="2023-07-10T18:27:56" hostname="DESKTOP-OS617JJ" time="22.301">
+  <properties/>
+  <testcase name="Login with valid email and wrong password #1" classname="Login" time="8.503">
+    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
+	at com.ilCarro.pages.LoginPage.getError(LoginPage.java:56)
+	at com.ilCarro.stepDefinitions.LoginSteps.verifies_error_message(LoginSteps.java:40)
+	at ✽.User verifies error message(file:///C:/Users/AIT%20TR%20Student/qa/QA_ilCarro_Cucumber/src/test/resources/features/login.feature:22)
+</failure>
+  </testcase>
+  <testcase name="Login with valid email and wrong password #2" classname="Login" time="8.044"/>
+  <testcase name="Login with valid email and wrong password #3" classname="Login" time="5.754"/>
+  <system-out><![CDATA[
+@wrongPassword
+Scenario Outline: Login with valid email and wrong password ?[90m# src/test/resources/features/login.feature:26?[0m
+  ?[32mGiven ?[0m?[32mUser launches Chrome Browser?[0m                        ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.launches_Chrome_Browser()?[0m
+  ?[32mWhen ?[0m?[32mUser opens ilCarro HomePage?[0m                          ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.opens_ilCarro_HomePage()?[0m
+  ?[32mAnd ?[0m?[32mUser clicks on Log in link?[0m                            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Log_in_link()?[0m
+  ?[32mAnd ?[0m?[32mUser enters valid email and wrong password?[0m            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.enters_valid_email_and_wrong_password(io.cucumber.datatable.DataTable)?[0m
+    | email                   | password     |
+    | nesterov.alex@gmail.com | 1234567890qW |
+  ?[32mAnd ?[0m?[32mUser clicks on Yalla button?[0m                           ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Yalla_button()?[0m
+  ?[31mThen ?[0m?[31mUser verifies error message?[0m                          ?[90m# com.ilCarro.stepDefinitions.LoginSteps.verifies_error_message()?[0m
+      ?[31mjava.lang.AssertionError
+	at com.ilCarro.pages.LoginPage.getError(LoginPage.java:56)
+	at com.ilCarro.stepDefinitions.LoginSteps.verifies_error_message(LoginSteps.java:40)
+	at âœ½.User verifies error message(file:///C:/Users/AIT%20TR%20Student/qa/QA_ilCarro_Cucumber/src/test/resources/features/login.feature:22)
+?[0m
+  ?[36mAnd ?[0m?[36mUser Quites browser?[0m                                   ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.quites_browser()?[0m
+
+@wrongPassword
+Scenario Outline: Login with valid email and wrong password ?[90m# src/test/resources/features/login.feature:27?[0m
+  ?[32mGiven ?[0m?[32mUser launches Chrome Browser?[0m                        ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.launches_Chrome_Browser()?[0m
+  ?[32mWhen ?[0m?[32mUser opens ilCarro HomePage?[0m                          ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.opens_ilCarro_HomePage()?[0m
+  ?[32mAnd ?[0m?[32mUser clicks on Log in link?[0m                            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Log_in_link()?[0m
+  ?[32mAnd ?[0m?[32mUser enters valid email and wrong password?[0m            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.enters_valid_email_and_wrong_password(io.cucumber.datatable.DataTable)?[0m
+    | email                   | password      |
+    | nesterov.alex@gmail.com | 1234567890qw! |
+  ?[32mAnd ?[0m?[32mUser clicks on Yalla button?[0m                           ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Yalla_button()?[0m
+  ?[32mThen ?[0m?[32mUser verifies error message?[0m                          ?[90m# com.ilCarro.stepDefinitions.LoginSteps.verifies_error_message()?[0m
+  ?[32mAnd ?[0m?[32mUser Quites browser?[0m                                   ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.quites_browser()?[0m
+
+@wrongPassword
+Scenario Outline: Login with valid email and wrong password ?[90m# src/test/resources/features/login.feature:28?[0m
+  ?[32mGiven ?[0m?[32mUser launches Chrome Browser?[0m                        ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.launches_Chrome_Browser()?[0m
+  ?[32mWhen ?[0m?[32mUser opens ilCarro HomePage?[0m                          ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.opens_ilCarro_HomePage()?[0m
+  ?[32mAnd ?[0m?[32mUser clicks on Log in link?[0m                            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Log_in_link()?[0m
+  ?[32mAnd ?[0m?[32mUser enters valid email and wrong password?[0m            ?[90m# com.ilCarro.stepDefinitions.LoginSteps.enters_valid_email_and_wrong_password(io.cucumber.datatable.DataTable)?[0m
+    | email                   | password      |
+    | nesterov.alex@gmail.com | aaaaaaaaaaqW! |
+  ?[32mAnd ?[0m?[32mUser clicks on Yalla button?[0m                           ?[90m# com.ilCarro.stepDefinitions.LoginSteps.clicks_on_Yalla_button()?[0m
+  ?[32mThen ?[0m?[32mUser verifies error message?[0m                          ?[90m# com.ilCarro.stepDefinitions.LoginSteps.verifies_error_message()?[0m
+  ?[32mAnd ?[0m?[32mUser Quites browser?[0m                                   ?[90m# com.ilCarro.stepDefinitions.HomePageSteps.quites_browser()?[0m
+]]></system-out>
+  <system-err><![CDATA[Jul 10, 2023 8:27:57 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Jul 10, 2023 8:28:05 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+Jul 10, 2023 8:28:13 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+]]></system-err>
+</testsuite>
