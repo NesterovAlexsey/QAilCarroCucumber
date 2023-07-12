@@ -56,4 +56,11 @@ public class LoginPage extends BasePage {
     assert isElementDisplayed(errorPassword);
     return this;
   }
+
+  @FindBy(xpath = "//button[.='Ok']")
+  WebElement okLoggedInButton;
+  public LoginPage clickOnOkButtonInLoggedInPage() {
+    click(okLoggedInButton);
+    return this;
+  }
 }

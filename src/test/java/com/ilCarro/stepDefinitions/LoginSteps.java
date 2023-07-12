@@ -39,4 +39,9 @@ public class LoginSteps {
   public void verifies_error_message() {
     new LoginPage(driver).getError();
   }
+
+  @And("User click on Ok button in logged in page")
+  public void click_on_Ok_button_in_logged_in_page() {
+    new LoginPage(driver).clickOnOkButtonInLoggedInPage();
+  }
 }
