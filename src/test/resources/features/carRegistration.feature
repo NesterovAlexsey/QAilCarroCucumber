@@ -13,4 +13,4 @@ Feature: Registration users car
 #    And User enters valid data in car registration form
 #    And User click submit in registration form
 #    Then User verifies car added message
-#    And User Quites browser
+    And User Quites browser

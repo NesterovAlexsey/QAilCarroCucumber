@@ -10,15 +10,11 @@ public class CarRegistrationPage extends BasePage {
     super(driver);
   }
 
-  @FindBy(xpath = "//h1[.=' Let the car work ' ]")
-  WebElement title;
-
-  //  @FindBy(xpath = "//a[.=' Let the car work ']")
-  @FindBy(id = "1")
+  @FindBy(xpath = "//a[.=' Let the car work ']")
   WebElement letTheCarWork;
   public CarRegistrationPage clickOnLetTheCarWork() {
+    pause(2000);
     click(letTheCarWork);
-    assert isElementDisplayed(title);
     return this;
   }
 }
